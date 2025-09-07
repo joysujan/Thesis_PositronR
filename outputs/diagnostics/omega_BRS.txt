@@ -1,0 +1,55 @@
+Omega 
+Call: omegah(m = m, nfactors = nfactors, fm = fm, key = key, flip = flip, 
+    digits = digits, title = title, sl = sl, labels = labels, 
+    plot = plot, n.obs = n.obs, rotate = rotate, Phi = Phi, option = option, 
+    covar = covar)
+Alpha:                 0.67 
+G.6:                   0.65 
+Omega Hierarchical:    0.67 
+Omega H asymptotic:    1 
+Omega Total            0.67 
+
+Schmid Leiman Factor loadings greater than  0.2 
+      g  F1*   h2   h2   u2 p2 com
+V1 0.45      0.21 0.21 0.79  1   1
+V2 0.58      0.34 0.34 0.66  1   1
+V3 0.35           0.12 0.88  1   1
+V4 0.44           0.19 0.81  1   1
+V5 0.60      0.37 0.37 0.63  1   1
+V6 0.59      0.35 0.35 0.65  1   1
+
+With Sums of squares  of:
+   g  F1*   h2 
+1.57 0.00 0.46 
+
+general/max  3.39   max/min =   6.669546e+15
+mean percent general =  1    with sd =  0 and cv of  0 
+Explained Common Variance of the general factor =  1 
+
+The degrees of freedom are 9  and the fit is  0.17 
+The number of observations was  851  with Chi Square =  144.73  with prob <  1.1e-26
+The root mean square of the residuals is  0.09 
+The df corrected root mean square of the residuals is  0.11
+RMSEA index =  0.133  and the 90 % confidence intervals are  0.115 0.153
+BIC =  84.01
+
+Compare this with the adequacy of just a general factor and no group factors
+The degrees of freedom for just the general factor are 9  and the fit is  0.17 
+The number of observations was  851  with Chi Square =  144.73  with prob <  1.1e-26
+The root mean square of the residuals is  0.09 
+The df corrected root mean square of the residuals is  0.11 
+
+RMSEA index =  0.133  and the 90 % confidence intervals are  0.115 0.153
+BIC =  84.01 
+
+Measures of factor score adequacy             
+                                                 g F1*
+Correlation of scores with factors            0.83   0
+Multiple R square of scores with factors      0.69   0
+Minimum correlation of factor score estimates 0.39  -1
+
+ Total, General and Subset omega for each subset
+                                                 g  F1*
+Omega total for total scores and subscales    0.67 0.67
+Omega general for total scores and subscales  0.67 0.67
+Omega group for total scores and subscales    0.00 0.00

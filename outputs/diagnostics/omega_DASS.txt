@@ -1,0 +1,70 @@
+Omega 
+Call: omegah(m = m, nfactors = nfactors, fm = fm, key = key, flip = flip, 
+    digits = digits, title = title, sl = sl, labels = labels, 
+    plot = plot, n.obs = n.obs, rotate = rotate, Phi = Phi, option = option, 
+    covar = covar)
+Alpha:                 0.89 
+G.6:                   0.91 
+Omega Hierarchical:    0.66 
+Omega H asymptotic:    0.73 
+Omega Total            0.91 
+
+Schmid Leiman Factor loadings greater than  0.2 
+       g   F1*   F2*   F3*    h2   h2   u2   p2  com
+V1  0.29                         0.12 0.88 0.70 1.78
+V2  0.33        0.24        0.21 0.21 0.79 0.51 2.79
+V3  0.40  0.31              0.27 0.27 0.73 0.59 2.07
+V4  0.47              0.46  0.43 0.43 0.57 0.51 2.00
+V5  0.43        0.28        0.27 0.27 0.73 0.68 1.81
+V6  0.46        0.34        0.33 0.33 0.67 0.65 1.87
+V7  0.48        0.34        0.36 0.36 0.64 0.64 1.96
+V8  0.56        0.39        0.47 0.47 0.53 0.65 1.90
+V9  0.51  0.22  0.25        0.38 0.38 0.62 0.70 1.89
+V10 0.48  0.52              0.51 0.51 0.49 0.45 2.02
+V11 0.54  0.28              0.42 0.42 0.58 0.70 1.88
+V12 0.44  0.25        0.20  0.30 0.30 0.70 0.65 2.05
+V13 0.55  0.29  0.31        0.48 0.48 0.52 0.63 2.13
+V14 0.35        0.41        0.30 0.30 0.70 0.41 2.14
+V15 0.59  0.21  0.20  0.20  0.47 0.47 0.53 0.74 1.76
+V16 0.43  0.41              0.38 0.38 0.62 0.49 2.29
+V17 0.42  0.62              0.56 0.56 0.44 0.31 1.75
+V18 0.47        0.33        0.34 0.34 0.66 0.66 1.84
+V19 0.50              0.36  0.39 0.39 0.61 0.64 1.95
+V20 0.52  0.25        0.28  0.41 0.41 0.59 0.65 2.07
+V21 0.45  0.65              0.63 0.63 0.37 0.32 1.83
+
+With Sums of squares  of:
+  g F1* F2* F3*  h2 
+4.6 1.8 1.1 0.6 3.4 
+
+general/max  1.36   max/min =   5.56
+mean percent general =  0.58    with sd =  0.13 and cv of  0.22 
+Explained Common Variance of the general factor =  0.57 
+
+The degrees of freedom are 150  and the fit is  0.65 
+The number of observations was  851  with Chi Square =  547.16  with prob <  1.4e-46
+The root mean square of the residuals is  0.04 
+The df corrected root mean square of the residuals is  0.04
+RMSEA index =  0.056  and the 90 % confidence intervals are  0.051 0.061
+BIC =  -464.81
+
+Compare this with the adequacy of just a general factor and no group factors
+The degrees of freedom for just the general factor are 189  and the fit is  1.84 
+The number of observations was  851  with Chi Square =  1547.23  with prob <  1.3e-211
+The root mean square of the residuals is  0.11 
+The df corrected root mean square of the residuals is  0.11 
+
+RMSEA index =  0.092  and the 90 % confidence intervals are  0.088 0.096
+BIC =  272.16 
+
+Measures of factor score adequacy             
+                                                 g  F1*   F2*   F3*
+Correlation of scores with factors            0.82 0.80  0.63  0.61
+Multiple R square of scores with factors      0.67 0.64  0.39  0.37
+Minimum correlation of factor score estimates 0.35 0.29 -0.21 -0.26
+
+ Total, General and Subset omega for each subset
+                                                 g  F1*  F2*  F3*
+Omega total for total scores and subscales    0.91 0.83 0.80 0.65
+Omega general for total scores and subscales  0.66 0.47 0.55 0.42
+Omega group for total scores and subscales    0.15 0.35 0.26 0.23

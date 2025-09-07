@@ -1,0 +1,10 @@
+Phase 2 Summary
+Chosen DASS model: ESEM 
+BRS model: one-factor CFA (WLSMV, theta)
+Key fit (DASS final):
+    cfi     tli   rmsea    srmr   chisq      df 
+  0.998   0.998   0.014   0.035 170.782 150.000 
+
+Key fit (BRS):
+    cfi     tli   rmsea    srmr   chisq      df 
+  0.913   0.854   0.127   0.075 129.819   9.000 
