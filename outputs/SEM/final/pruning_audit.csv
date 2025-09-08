@@ -1,0 +1,6 @@
+"Block","Available","Used"
+"Gender",TRUE,TRUE
+"AcadYear",TRUE,TRUE
+"Dept",TRUE,FALSE
+"Residence",TRUE,TRUE
+"Living",TRUE,FALSE

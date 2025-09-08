@@ -1,0 +1,1 @@
+Ward vs k-means ARI (k=2): 0.296

@@ -1,0 +1,14 @@
+
+  Dep =~ dQ3D + dQ5D + dQ10D + dQ13D + dQ16D + dQ17D + dQ21D
+  Anx =~ dQ2A + dQ4A + dQ7A + dQ9A + dQ15A + dQ19A + dQ20A
+  Str =~ dQ1S + dQ6S + dQ8S + dQ11S + dQ12S + dQ14S + dQ18S
+  BRS =~ rQ1 + rQ3 + rQ5 + rQ2_r + rQ4_r + rQ6_r
+
+  Dep ~ BRS
+  Anx ~ BRS
+  Str ~ BRS
+
+  Dep ~~ Anx
+  Dep ~~ Str
+  Anx ~~ Str
+

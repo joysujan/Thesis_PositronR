@@ -1,0 +1,11 @@
+Phase 4: PCA PCs used = 1,2; shortlist k = 2,3
+Chosen solution: k-means k = 2; Average silhouette ≈ NA
+Ward vs k-means ARI (k=2): 0.296
+
+Cluster sizes:
+  C1 (Low-distress / High-resilience): n=310 (51.5%)
+  C2 (High-distress / Low-resilience): n=292 (48.5%)
+
+Profile means (z): see cluster_profile_means_CI.csv
+Descriptor percentages: see cluster_descriptors.csv
+Figures: profiles, PC scatter, ARI stability, elbow, silhouette, PCA scree/cumvar saved in outputs/Phase4/final/

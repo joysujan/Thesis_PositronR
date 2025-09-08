@@ -1,0 +1,19 @@
+cluster,Descriptor,Level,n,pct
+C1,academic_year,1st Yr,97,0.31290322580645163
+C1,academic_year,2nd Yr,130,0.41935483870967744
+C1,academic_year,3rd Yr,49,0.15806451612903225
+C1,academic_year,4th Yr,34,0.10967741935483871
+C1,gender,Female,90,0.2903225806451613
+C1,gender,Male,220,0.7096774193548387
+C1,residence,Rural,95,0.3064516129032258
+C1,residence,Suburb/Semi-Urban,53,0.17096774193548386
+C1,residence,Urban,162,0.5225806451612903
+C2,academic_year,1st Yr,62,0.21232876712328766
+C2,academic_year,2nd Yr,111,0.3801369863013699
+C2,academic_year,3rd Yr,66,0.22602739726027396
+C2,academic_year,4th Yr,53,0.1815068493150685
+C2,gender,Female,198,0.678082191780822
+C2,gender,Male,94,0.3219178082191781
+C2,residence,Rural,73,0.25
+C2,residence,Suburb/Semi-Urban,88,0.3013698630136986
+C2,residence,Urban,131,0.4486301369863014

@@ -1,0 +1,2 @@
+pcs_used: 1,2
+shortlist_k: 2,3
