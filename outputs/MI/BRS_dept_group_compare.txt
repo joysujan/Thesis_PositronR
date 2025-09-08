@@ -1,0 +1,18 @@
+The following lavaan models were compared:
+    cfg
+    thr
+    met
+To view results, assign the compareFit() output to an object and  use the summary() method; see the class?FitDiff help page.
+
+
+-- Configural fit --
+    cfi     tli   rmsea    srmr   chisq      df 
+  0.944   0.907   0.123   0.078 157.209  45.000 
+
+-- Thresholds fit --
+    cfi     tli   rmsea    srmr   chisq      df 
+  0.952   0.961   0.080   0.078 189.912  93.000 
+
+-- Thresholds+Loadings fit --
+    cfi     tli   rmsea    srmr   chisq      df 
+  0.909   0.939   0.100   0.096 296.179 113.000 
