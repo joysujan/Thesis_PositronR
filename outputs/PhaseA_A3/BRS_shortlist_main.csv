@@ -1,0 +1,4 @@
+item,primary_factor,primary_loading,max_cross,communality,pass_primary,pass_cross,pass_comm,keep_rule,domain,keep_EFA,reason
+rQ4_r,PA1,0.6038350875453323,NA,0.3646168129508792,TRUE,TRUE,FALSE,FALSE,BRS,TRUE,pass/borderline by loading
+rQ6_r,PA1,0.5904196649598342,NA,0.3485953807712829,TRUE,TRUE,FALSE,FALSE,BRS,TRUE,pass/borderline by loading
+rQ3,PA1,0.5813532104018133,NA,0.337971555244495,TRUE,TRUE,FALSE,FALSE,BRS,TRUE,pass/borderline by loading

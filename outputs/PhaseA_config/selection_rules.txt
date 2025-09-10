@@ -1,0 +1,6 @@
+Phase A1 configuration:
+Rotation: Oblimin (oblique)
+Factoring: Principal axis (psych::fa, fm='pa')
+Primary loading >= 0.5 , Cross-loading < 0.3
+Communality preference >= 0.4
+Target items per factor: Dep1 2-2; Dep2 3-3; Dep3 4-4; Anx1 2-2; Anx2 3-3; Anx3 4-4; Str1 2-2; Str2 3-3; Str3 4-4; BRS1 2-2; BRS2 3-3
