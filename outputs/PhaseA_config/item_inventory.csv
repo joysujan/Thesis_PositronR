@@ -1,4 +1,4 @@
-item,domain,planned_factor,keep_EFA,keep_ESEM,reason,notes
+item,domain,planned_factor,keep_ESEM,notes,keep_EFA,reason
 dQ1S,DASS,Str,NA,NA,NA,NA
 dQ2A,DASS,Anx,NA,NA,NA,NA
 dQ3D,DASS,Dep,NA,NA,NA,NA
@@ -20,9 +20,9 @@ dQ18S,DASS,Str,NA,NA,NA,NA
 dQ19A,DASS,Anx,NA,NA,NA,NA
 dQ20A,DASS,Anx,NA,NA,NA,NA
 dQ21D,DASS,Dep,NA,NA,NA,NA
-rQ1,BRS,BRS,NA,NA,NA,NA
-rQ3,BRS,BRS,NA,NA,NA,NA
-rQ5,BRS,BRS,NA,NA,NA,NA
-rQ2_r,BRS,BRS,NA,NA,NA,NA
-rQ4_r,BRS,BRS,NA,NA,NA,NA
-rQ6_r,BRS,BRS,NA,NA,NA,NA
+rQ1,BRS,BRS,NA,NA,TRUE,pass/borderline by loading
+rQ3,BRS,BRS,NA,NA,TRUE,pass/borderline by loading
+rQ5,BRS,BRS,NA,NA,FALSE,drop: low primary
+rQ2_r,BRS,BRS,NA,NA,FALSE,drop: low primary
+rQ4_r,BRS,BRS,NA,NA,TRUE,pass/borderline by loading
+rQ6_r,BRS,BRS,NA,NA,TRUE,pass/borderline by loading
