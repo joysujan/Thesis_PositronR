@@ -1,0 +1,26 @@
+obs_cat,pred_cat_eq,Freq
+Normal,Normal,14
+Mild,Normal,2
+Moderate,Normal,6
+Severe,Normal,1
+Extremely Severe,Normal,0
+Normal,Mild,2
+Mild,Mild,3
+Moderate,Mild,2
+Severe,Mild,1
+Extremely Severe,Mild,1
+Normal,Moderate,3
+Mild,Moderate,8
+Moderate,Moderate,25
+Severe,Moderate,10
+Extremely Severe,Moderate,12
+Normal,Severe,0
+Mild,Severe,0
+Moderate,Severe,13
+Severe,Severe,23
+Extremely Severe,Severe,25
+Normal,Extremely Severe,0
+Mild,Extremely Severe,1
+Moderate,Extremely Severe,8
+Severe,Extremely Severe,24
+Extremely Severe,Extremely Severe,667

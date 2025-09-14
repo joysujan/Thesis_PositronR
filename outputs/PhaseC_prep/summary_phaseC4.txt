@@ -1,0 +1,4 @@
+Final items (n = 15 ): dQ7A, dQ10D, dQ13D, dQ14S, dQ16D, dQ17D, dQ18S, dQ19A, dQ20A, dQ21D, dQ1S, dQ9A, dQ11S, dQ12S, dQ15A
+Model = GRM; method = MHRM; scores = EAP; outputs saved in outputs/PhaseC_prep
+ROC AUC = 0.946
+Cut-scores saved: roc_cut_youden.csv (balanced) and roc_cut_sens80.csv (sens-prioritized)

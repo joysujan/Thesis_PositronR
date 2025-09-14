@@ -1,0 +1,58 @@
+flowchart TD
+
+  %% Phase 1 (Intake)
+  P1A["P1: Factors labeled"]:::p1 --> P2A
+  P1B["P1: SEM-safe names"]:::p1 --> P2A
+  P1C["P1: Ordered items (0–3/1–5)"]:::p1 --> P2A
+  P1D["P1: K-1 dummies"]:::p1 --> P3A
+
+  %% Phase 2 (Measurement)
+  P2A["P2: CFA/SEM spec (WLSMV/theta)"]:::p2 --> P2B
+  P2B["P2: Core SEM fit + R²"]:::p2 --> P4A
+  P2B --> P3A
+  P2C["P2: MG invariance (thr+load)"]:::p2
+  P2D["P2: Path equality tests (Δ)"]:::p2
+  P2A --> P2C --> P2D
+
+  %% Phase 3 (Structural)
+  P3A["P3: MI + design pruning"]:::p3 --> P3B
+  P3B["P3: Extended SEM across imputations"]:::p3 --> P3C
+  P3C["P3: D2 pooled estimates + scores"]:::p3 --> P4A
+  P3C --> P5C_CAL
+
+  %% Phase 4 (Profiling)
+  P4A["P4: Load latents, z-score"]:::p4 --> P4B
+  P4B["P4: PCA (PC1–2)"]:::p4 --> P4C
+  P4C["P4: k-scan + silhouette"]:::p4 --> P4D
+  P4D["P4: Final k-means + ARI"]:::p4 --> P4E
+  P4E["P4: Profiles + descriptors"]:::p4 --> P5C_ROC
+
+  %% Phase 5A (EFA+Network)
+  P5A1["5A: Polychoric PA (nfactors)"]:::p5a --> P5A2
+  P5A2["5A: EFA (PA/oblimin) + flags"]:::p5a --> P5A3
+  P5A3["5A: Domain shortlists"]:::p5a --> P5C3
+
+  %% Phase 5C (GRM Short Form)
+  P5C0["5C: GRM 21 (a,b) + Q3"]:::p5c --> P5C1
+  P5C1["5C: TIF + marginal reliability"]:::p5c --> P5C2
+  P5C2["5C: Diagnostics + balanced drops"]:::p5c --> P5C4
+  P5C4["5C: GRM 15 + overlays"]:::p5c --> P5C5
+  P5C5["5C: EAP θ, SE; sum→θ map"]:::p5c --> P5D1
+  P5C_CAL["5C: SEM calibration (θ→θ_cal)"]:::p5c --> P5D1
+  P5C_ROC["5C: ROC ops (Youden, Sens≥0.80)"]:::p5c --> P5D1
+  P5C3["5C: Use 5A shortlist penalties"]:::p5c --> P5C2
+
+  %% Phase 5D (Packaging)
+  P5D1["5D: Kit (model, linker, ROC, scripts)"]:::p5d --> P5D2
+  P5D2["5D: score_shortform() (θ, SE → θ_cal, flag)"]:::p5d --> P5D3
+  P5D3["5D: R pkg dasssf15 + validate"]:::p5d --> BI
+  BI["Handoff: BI (θ/θ_cal + flag)"]:::p5d
+
+  %% Styling
+  classDef p1 fill:#E0F2F1,stroke:#00695C,stroke-width:1.5px;
+  classDef p2 fill:#E3F2FD,stroke:#0D47A1,stroke-width:1.5px;
+  classDef p3 fill:#FFE082,stroke:#6D4C41,stroke-width:1.5px;
+  classDef p4 fill:#EDE7F6,stroke:#4A148C,stroke-width:1.5px;
+  classDef p5a fill:#E8EAF6,stroke:#283593,stroke-width:1.5px;
+  classDef p5c fill:#FCE4EC,stroke:#880E4F,stroke-width:1.5px;
+  classDef p5d fill:#E0F7FA,stroke:#006064,stroke-width:1.5px;

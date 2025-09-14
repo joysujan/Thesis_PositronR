@@ -1,0 +1,26 @@
+obs_cat,legacy21_cat,Freq
+Normal,Normal,19
+Mild,Normal,8
+Moderate,Normal,26
+Severe,Normal,7
+Extremely Severe,Normal,2
+Normal,Mild,0
+Mild,Mild,0
+Moderate,Mild,9
+Severe,Mild,22
+Extremely Severe,Mild,18
+Normal,Moderate,0
+Mild,Moderate,0
+Moderate,Moderate,0
+Severe,Moderate,14
+Extremely Severe,Moderate,123
+Normal,Severe,0
+Mild,Severe,0
+Moderate,Severe,0
+Severe,Severe,0
+Extremely Severe,Severe,124
+Normal,Extremely Severe,0
+Mild,Extremely Severe,0
+Moderate,Extremely Severe,0
+Severe,Extremely Severe,0
+Extremely Severe,Extremely Severe,297

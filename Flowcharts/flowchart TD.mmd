@@ -1,0 +1,99 @@
+flowchart TD
+
+%% Styles
+classDef phase fill:#eef,stroke:#447,stroke-width:1px;
+classDef task fill:#fff,stroke:#999,stroke-width:1px;
+
+%% Phase headers (anchors)
+P1H[Phase 1]:::phase --> P2H[Phase 2]:::phase --> P3H[Phase 3]:::phase --> P4H[Phase 4]:::phase --> P5AH[Phase 5A]:::phase --> P5CH[Phase 5C]:::phase --> P5DH[Phase 5D]:::phase
+
+%% Phase 1
+subgraph S1[Phase 1: Data intake and prep]
+direction TB
+P1a[Load data label factors sanitize names]:::task
+P1b[Set ordered factors DASS and BRS]:::task
+P1c[Build NA preserving K 1 dummies]:::task
+P1d[Bind dummies verify rows and dimensions]:::task
+P1a --> P1b --> P1c --> P1d
+end
+P1H --> P1a
+
+%% Phase 2
+subgraph S2[Phase 2: Measurement and groups]
+direction TB
+P2a[Specify DASS three and BRS one WLSMV theta std lv]:::task
+P2b[Core SEM BRS to Dep Anx Str fit standardized paths R2]:::task
+P2c[Multi group by gender and year thresholds and loadings]:::task
+P2d[Equality tests delta CFI TLI RMSEA]:::task
+P2e[Archive syntax and sessionInfo]:::task
+P2a --> P2b --> P2c --> P2d --> P2e
+end
+P2H --> P2a
+
+%% Phase 3
+subgraph S3[Phase 3: Structural and MI]
+direction TB
+P3a[Impute cgpa and income m 20]:::task
+P3b[Rebuild factors and dummies prune sparse or collinear]:::task
+P3c[Extended SEM across imputations D2 pooling]:::task
+P3d[DWLS sensitivity check]:::task
+P3e[Figures forests semPlot R2 group figures]:::task
+P3f[Export latent scores and general distress]:::task
+P3a --> P3b --> P3c --> P3d --> P3e --> P3f
+end
+P3H --> P3a
+
+%% Phase 4
+subgraph S4[Phase 4: Latent profiling]
+direction TB
+P4a[Z score latents PCA scree and cumulative]:::task
+P4b[K scan two to eight WSS and silhouette shortlist]:::task
+P4c[Final k means PC1 to PC2 scatter silhouettes]:::task
+P4d[Bootstrap stability ARI Ward sensitivity]:::task
+P4e[Cluster profiles means and 95 CI descriptors]:::task
+P4f[Deliver PC scores labels plots summary]:::task
+P4a --> P4b --> P4c --> P4d --> P4e --> P4f
+end
+P4H --> P4a
+
+%% Phase 5A
+subgraph S5A[Phase 5A: EFA and Network]
+direction TB
+P5Aa[Check levels item inventory and rules]:::task
+P5Ab[Polychoric parallel analysis set nfactors]:::task
+P5Ac[EFA PA oblimin poly loadings and flags]:::task
+P5Ad[Domain shortlists mains and alternates]:::task
+P5Ae[EBICglasso network bootstraps redundancy]:::task
+P5Aa --> P5Ab --> P5Ac --> P5Ad --> P5Ae
+end
+P5AH --> P5Aa
+
+%% Phase 5C
+subgraph S5C[Phase 5C: GRM short form]
+direction TB
+P5Ca[Fit 21 item one dimensional GRM parameters fit Q3 TIF reliability]:::task
+P5Cb[Diagnostics table guardrails domain balance]:::task
+P5Cc[Select domain balanced fifteen drop packet]:::task
+P5Cd[Fit fifteen item GRM Q3 TIF reliability overlay]:::task
+P5Ce[Scoring EAP theta and SE raw sum to theta map]:::task
+P5Cf[Optional SEM calibration ROC Youden and Sens 0.80]:::task
+P5Cg[DIF lite screens export flags]:::task
+P5Ca --> P5Cb --> P5Cc --> P5Cd --> P5Ce --> P5Cf --> P5Cg
+end
+P5CH --> P5Ca
+
+%% Phase 5D
+subgraph S5D[Phase 5D: Packaging and Shipping]
+direction TB
+P5Da[Assemble kit models linkers ROC code docs]:::task
+P5Db[score shortform theta se theta cal elevated legacy]:::task
+P5Dc[Reliability and TIF overlays Q3 notes]:::task
+P5Dd[R package dasssf15 score and validate]:::task
+P5De[Maintain ROC operating points]:::task
+P5Df[QA smoke tests and validation build notes]:::task
+P5Dg[Reporting structure validity interpretability]:::task
+P5Dh[Handoffs BI fields and methods appendix]:::task
+P5Di[Maintenance refresh ROC legacy links versioning]:::task
+P5Da --> P5Db --> P5Dc --> P5Dd --> P5De --> P5Df --> P5Dg --> P5Dh --> P5Di
+end
+P5DH --> P5Da

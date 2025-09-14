@@ -1,0 +1,25 @@
+version: 1.0.0
+date: 2025-09-13
+default_cut: "Youden"
+r_version: "R version 4.5.1 (2025-06-13 ucrt)"
+mirt_version: "1.45.1"
+assets:
+  - path: kit/assets/mod15.rds
+    sha256: 516206898b056d2405713bed9643bebdbaf8495acf8932f18d018da216bf5f83
+    size_bytes: 73748
+  - path: kit/assets/link_theta_to_sem.rds
+    sha256: c1192734ad817fd24606d46ed689a1baf6e09908afda9b0ff841ca9dcc5b616f
+    size_bytes: 28685
+  - path: kit/tables/roc_operating_points.csv
+    sha256: 760b1653fa6aec70284e5d23ea636adcb6c0109b25530bb02dd33663ef3036b8
+    size_bytes: 282
+  - path: kit/tables/legacy_link_equiperc.csv
+    sha256: 0864d6a3447098835b45d1a1166056bff2ad78f2b7825b62829bab1414f1e2e3
+    size_bytes: 3138
+  - path: kit/tables/legacy_link_linear_coeffs.csv
+    sha256: 071649ce3ddb641b691fa394eea8b03853a76b646703b22723bfddc493b42410
+    size_bytes: 69
+  - path: kit/tables/item_parameters_min.csv
+    sha256: df8501a5e8b74f728a62a53e33743ca1d3bd06fc005d8977da5fa6f1f3cbc4d7
+    size_bytes: 1258
+

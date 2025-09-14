@@ -1,0 +1,3 @@
+Gender DIF-lite: groups=Female vs Male; flags 15/15 (|Δa|>=0.20 or |Δb|>=0.25).
+Max |Δa|=0.625; Max |Δb_k|=1.750.
+See dif_gender_param_compare.csv and dif_gender_itemfit.csv.

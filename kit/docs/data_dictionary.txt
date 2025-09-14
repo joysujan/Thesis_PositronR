@@ -1,0 +1,9 @@
+Input item columns:
+  Names: exactly as in the model; see kit/tables/item_parameters_min.csv (item column).
+  Coding: integers 0..3 (ordered) per DASS category coding.
+
+Output columns:
+  theta: EAP IRT score; se: standard error.
+  theta_cal: calibrated to Phase-3 SEM latent (linear link).
+  elevated: 0/1 using recommended ROC threshold.
+  dass21_total_approx, dass21_category_approx: optional legacy display (approximate).

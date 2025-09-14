@@ -1,0 +1,3 @@
+Year DIF-lite: groups=1st Yr vs 2nd Yr; flags 14/15.
+Max |Δa|=0.856; Max |Δb_k|=4.734.
+See dif_year_param_compare.csv and dif_year_itemfit.csv.

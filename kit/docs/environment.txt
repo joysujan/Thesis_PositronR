@@ -1,0 +1,6 @@
+Release: 1.0.0
+Date: 2025-09-13
+R: R version 4.5.1 (2025-06-13 ucrt)
+mirt: 1.45.1
+readr: 2.1.5
+dplyr: 1.1.4

@@ -1,0 +1,7 @@
+item,domain,a,mean_info_band,max_absQ3,comp,Rationale
+dQ2A,Anx,0.5575769713500072,0.09244501984512069,0.16889643320277445,NA,lowest composite (info/a/Δinfo) + penalties (misfit/Q3/threshold)
+dQ4A,Anx,0.8864924432849571,0.24147587670725254,0.14786801172508446,NA,lowest composite (info/a/Δinfo) + penalties (misfit/Q3/threshold)
+dQ3D,Dep,0.9690569629160528,0.28711608105869196,0.1404423776840901,NA,lowest composite (info/a/Δinfo) + penalties (misfit/Q3/threshold)
+dQ5D,Dep,0.9228387610569052,0.24058741251043916,0.1897716205210868,NA,lowest composite (info/a/Δinfo) + penalties (misfit/Q3/threshold)
+dQ6S,Str,1.1032473866005066,0.35349384242895765,0.15516314576618545,NA,lowest composite (info/a/Δinfo) + penalties (misfit/Q3/threshold)
+dQ8S,Str,1.3061501193524925,0.42593075600590796,0.2132501810437102,NA,lowest composite (info/a/Δinfo) + penalties (misfit/Q3/threshold)

@@ -1,0 +1,3 @@
+cut_name,threshold,sensitivity,specificity,prevalence,PPV,NPV,roc_direction
+Youden,-0.055,0.89,0.855,0.485,0.852,0.892,<
+Sens>=0.80,NA,0.8,0.9,0.485,0.883,0.827,<

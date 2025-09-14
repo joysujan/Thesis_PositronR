@@ -1,0 +1,6 @@
+"","Normal","Mild","Moderate","Severe","Extremely Severe"
+"Normal",19,8,26,7,2
+"Mild",0,0,9,22,18
+"Moderate",0,0,0,14,123
+"Severe",0,0,0,0,124
+"Extremely Severe",0,0,0,0,297

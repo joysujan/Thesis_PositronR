@@ -1,0 +1,3 @@
+Stage D DIF summary:
+Gender DIF not run.
+Year DIF not run.

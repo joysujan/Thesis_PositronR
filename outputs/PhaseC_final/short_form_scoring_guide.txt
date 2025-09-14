@@ -1,0 +1,5 @@
+Short-form DASS (15 items): dQ7A,dQ10D,dQ13D,dQ14S,dQ16D,dQ17D,dQ18S,dQ19A,dQ20A,dQ21D,dQ1S,dQ9A,dQ11S,dQ12S,dQ15A
+- Model: GRM; Scores: EAP theta with SE; higher theta = higher distress
+- Test information peaks in θ≈0–1.5 (screening range), providing high precision where decisions are made
+- Use ROC cut-score(s) from annotated plots/tables: Youden (balanced) and Sens≥0.80 (sensitivity-prioritized)
+- Dashboards: report mean θ, % elevated (by cut), and calibrated latent score if required

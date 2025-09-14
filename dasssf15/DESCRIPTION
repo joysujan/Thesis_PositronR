@@ -1,0 +1,12 @@
+Package: dasssf15
+Title: DASS 15-item Scoring with Approximate DASS-21 Display
+Version: 1.0.0
+Authors@R: person('First','Last', email='you@example.com', role=c('aut','cre'))
+Description: Score the 15-item short form using a saved IRT model (mirt), calibrate to SEM,
+ and optionally approximate DASS-21 totals and categories via trained linking.
+Depends: R (>= 4.2)
+Imports: mirt, pROC, readr, dplyr, stats
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.3

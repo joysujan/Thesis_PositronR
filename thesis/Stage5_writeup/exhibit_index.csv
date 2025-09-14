@@ -1,0 +1,5 @@
+section,figure,table
+Psychometrics,fig_tif_overlay.png / fig_tif_band.png,item_parameters_min.csv
+Psychometrics,fig_traces_faceted.png / fig_item_info_facets.png / fig_q3_heatmap.png,—
+Calibration,fig_calibration_theta.png,calibration_summary.csv
+ROC,fig_ROC_annotated.png / fig_sens_spec_vs_threshold.png,operating_points.csv

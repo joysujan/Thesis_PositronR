@@ -1,0 +1,7 @@
+suppressPackageStartupMessages(library(mirt))
+source("kit/code/helpers.R")
+source("kit/code/score_shortform.R")
+df <- readr::read_csv("kit/examples/example_input_20rows.csv", show_col_types = FALSE)
+sc <- score_shortform(df, assets_dir = "kit/assets", tables_dir = "kit/tables", cut = "Youden", legacy = TRUE, legacy_method = "equiperc")
+readr::write_csv(sc, "kit/examples/example_scored_output.csv")
+cat("Scored 20-row example (cut = Youden) written to kit/examples/example_scored_output.csv\n")

@@ -1,0 +1,5 @@
+Phase C2 Check Summary:
+Model converged: TRUE
+Total items: 21 Kept: 21 Dropped: 0
+Domain coverage: Anx: 7; Dep: 7; Str: 7
+See plots for information and reliability.

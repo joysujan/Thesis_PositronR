@@ -1,0 +1,106 @@
+flowchart TD
+  %% Phase 1
+  P1A["Phase 1: Factors to labeled"]:::p1 --> P2A
+  P1B["SEM-safe names"]:::p1 --> P2A
+  P1C["Ordered items DASS/BRS"]:::p1 --> P2A
+  P1D["NA-preserving K-1 dummies"]:::p1 --> P3A
+  P1E["Row/dimension checks OK"]:::p1 --> P2A
+
+  %% Phase 2
+  P2A["Phase 2: CFA/SEM spec (WLSMV, theta, std.lv)"]:::p2 --> P2B
+  P2B["Fit core SEM; fit, std paths, R2"]:::p2 --> DEC_P2FIT
+  DEC_P2FIT{"Fit acceptable?"}:::dec -->|Yes| P2C
+  DEC_P2FIT -->|No| STOP_P2["Review model"]
+  P2C["Multi-group (gender, year): thresholds+loadings equal"]:::p2 --> P2D
+  P2D["Constrain BRS paths equal; ΔCFI/TLI/RMSEA"]:::p2 --> DEC_P2EQ
+  DEC_P2EQ{"Paths equal across groups?"}:::dec -->|Yes| P2E
+  DEC_P2EQ -->|No| FLAG_P2["Flag non-equality"]
+  P2E["Export syntax + sessionInfo"]:::p2 --> P3A
+  P2B --> P3F
+  P2B --> P4A
+
+  %% Phase 3
+  P3A["Phase 3: MI cgpa/income (m=20 PMM)"]:::p3 --> P3B
+  P3B["Rebuild factors/dummies; drop ultra-sparse"]:::p3 --> P3C
+  P3C["Prune exogenous (var<1e-3, |r|>0.95)"]:::p3 --> DEC_P3PRUNE
+  DEC_P3PRUNE{"Audit frozen?"}:::dec -->|Yes| P3D
+  DEC_P3PRUNE -->|No| STOP_P3["Re-run pruning"]
+  P3D["Extended SEM across imputations"]:::p3 --> P3E
+  P3E["D2 pooling; delta-SE for std effects"]:::p3 --> P3F
+  P3F["Save pooled tables/fit; factor scores + gdist"]:::p3 --> P4A
+  P3F --> P5C_H["SEM calibration target"]
+
+  %% Phase 4
+  P4A["Phase 4: Load latents; z-score"]:::p4 --> P4B
+  P4B["PCA; scree/cumulative; default PC1-2"]:::p4 --> DEC_P4VAR
+  DEC_P4VAR{"Variance sufficient?"}:::dec -->|Yes| P4C
+  DEC_P4VAR -->|No| P4B3["Test PC1-3/4D"]
+  P4C["k-scan 2-8: WSS + silhouette"]:::p4 --> P4D
+  P4D["Final k-means; final silhouette"]:::p4 --> DEC_P4SIL
+  DEC_P4SIL{"Silhouette ok (~0.5–0.7+)?"}:::dec -->|Yes| P4E
+  DEC_P4SIL -->|No| P4C
+  P4E["Bootstrap ARI stability"]:::p4 --> DEC_P4ARI
+  DEC_P4ARI{"Stable ARI?"}:::dec -->|Yes| P4F
+  DEC_P4ARI -->|No| P4C
+  P4F["Ward sensitivity; ARI + confusion"]:::p4 --> P4G
+  P4G["Cluster profiles + descriptors"]:::p4 --> P5C_ROC["Optional ROC labels"]
+
+  %% Phase 5A
+  P5A1["Phase 5A: Level checks (DASS/BRS)"]:::p5a --> DEC_5A_LVL
+  DEC_5A_LVL{"Levels ok?"}:::dec -->|Yes| P5A2
+  DEC_5A_LVL -->|No| STOP_5A["Fix levels"]
+  P5A2["Inventory + rules (PA/oblimin; thresholds)"]:::p5a --> P5A3
+  P5A3["PA polychoric; set nfactors"]:::p5a --> DEC_5A_NF
+  DEC_5A_NF{"Matches theory?"}:::dec -->|Yes| P5A4
+  DEC_5A_NF -->|No| REVIEW_5A["Review domains"]
+  P5A4["EFA (PA/oblimin/poly); flags keep_rule"]:::p5a --> P5A5
+  P5A5["Domain shortlists (mains+alternates)"]:::p5a --> P5C_DROP_HINT["Penalty hints for GRM drop"]
+
+  %% Phase 5C
+  P5C0["Phase 5C: 21 items + groups; checks"]:::p5c --> DEC_5C_IN
+  DEC_5C_IN{"Checks pass?"}:::dec -->|Yes| P5C1
+  DEC_5C_IN -->|No| STOP_5C["Fix inputs"]
+  P5C1["GRM 21: a,b; S-X2/infit; Q3 matrix"]:::p5c --> P5C2
+  P5C1 --> Q3_NOTE["Q3 bootstrap if high-stakes"]:::note
+  P5C2["TIF + marginal reliability rel=I/(I+1)"]:::p5c --> P5C3
+  P5C3["Diagnostics: a,b-order, fit, info-band, jackknife, max|Q3|, domain"]:::p5c --> DEC_5C_DROP
+  DEC_5C_DROP{"Conservative drops balanced?"}:::dec -->|Yes| P5C4
+  DEC_5C_DROP -->|No| P5C_TUNE["Revise drops"]
+  P5C4["Reduced GRM 15; Q3; TIF/reliability overlay"]:::p5c --> DEC_5C_ACC
+  DEC_5C_ACC{"Target precision retained?"}:::dec -->|Yes| P5C5
+  DEC_5C_ACC -->|No| P5C_TUNE
+  P5C5["EAP theta + SE; raw-sum→theta map (+R2)"]:::p5c --> P5D1
+  P5C5 --> P5C_CAL["Optional SEM calibration theta_cal"]
+  P5C5 --> P5C_ROC2["Optional ROC: Youden + Sens≥0.80"]
+
+  %% Phase 5D
+  P5D1["Phase 5D: Assemble kit (models, linker, ROC, scripts)"]:::p5d --> P5D2
+  P5D2["score_shortform(): theta, SE → theta_cal; apply ROC cut"]:::p5d --> P5D3
+  P5D3["R package dasssf15; validate_on_sample()"]:::p5d --> DEC_5D_VAL
+  DEC_5D_VAL{"Validation metrics ok?"}:::dec -->|Yes| P5D_SHIP["Ship kit + package"]
+  DEC_5D_VAL -->|No| P5C_TUNE
+  P5D3 --> P5D_QA["Smoke tests + rebuild exhibits"]
+  P5D3 --> BI["Handoff to BI (theta_cal/theta + elevated)"]
+  P5D3 --> METHODS["Handoff to Methods (plots/tables/ROC/Q3)"]
+
+  %% Interconnections
+  P1A & P1B & P1C & P1E --> P2A
+  P1D --> P3A
+  P2B --> P3F
+  P2B --> P4A
+  P3F --> P4A
+  P3F --> P5C_CAL
+  P4G --> P5C_ROC
+  P5A5 --> P5C3
+  P5C4 --> P5D1
+  P5C5 --> P5D1
+
+  classDef p1 fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px;
+  classDef p2 fill:#e3f2fd,stroke:#1565c0,stroke-width:1px;
+  classDef p3 fill:#fff3e0,stroke:#ef6c00,stroke-width:1px;
+  classDef p4 fill:#f3e5f5,stroke:#6a1b9a,stroke-width:1px;
+  classDef p5a fill:#ede7f6,stroke:#4527a0,stroke-width:1px;
+  classDef p5c fill:#fce4ec,stroke:#ad1457,stroke-width:1px;
+  classDef p5d fill:#e0f2f1,stroke:#00695c,stroke-width:1px;
+  classDef dec fill:#fffde7,stroke:#f9a825,stroke-width:1px,stroke-dasharray: 5 3;
+  classDef note fill:#fafafa,stroke:#9e9e9e,stroke-width:1px,stroke-dasharray: 2 2;

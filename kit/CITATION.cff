@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: dasssf15: DASS 15-item Scoring with Approximate DASS-21 Display
+version: 1.0.0
+date-released: 2025-09-13
+authors:
+  - family-names: Last
+    given-names: First
+identifiers:
+  - type: doi
+    value: 10.0000/placeholder
+repository-code: https://example.org/repo
+license: MIT
+message: >-
+  Please cite this package and kit when using the DASS-15 scorer and derived artifacts.

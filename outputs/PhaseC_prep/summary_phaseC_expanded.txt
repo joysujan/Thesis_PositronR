@@ -1,0 +1,6 @@
+Phase C prep (EXPANDED):
+Included DASS items (n = 21 ): dQ2A, dQ3D, dQ4A, dQ5D, dQ6S, dQ7A, dQ8S, dQ10D, dQ13D, dQ14S, dQ16D, dQ17D, dQ18S, dQ19A, dQ20A, dQ21D, dQ1S, dQ9A, dQ11S, dQ12S, dQ15A
+Included BRS items (n = 6): rQ1, rQ3, rQ5, rQ2_r, rQ4_r, rQ6_r
+- Items retain original scoring (DASS 0-3, BRS 1-5).
+- Group variables gender and academic_year are plain factors.
+- No pre-emptive removal after EFA/network; all candidates retained for IRT and DIF model selection.
