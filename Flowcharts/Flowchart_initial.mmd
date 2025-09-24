@@ -1,0 +1,23 @@
+---
+config:
+  layout: elk
+---
+flowchart TD
+    P1prep["Prep: Label, Clean, Order"] --> P2cfa["CFA: DASS+BRS"] & P2core["SEM: BRS -> DASS"] & P2mg["MG-SEM: Group invariance"]
+    P2cfa --> P2comp["Compare models/Export scores"]
+    P2core --> P2comp
+    P2mg --> P2comp
+    P3mi["MI: cgpa, income"] --> P3sem["Ext SEM with MI/pruning"]
+    P3sem --> P3pool["Pool params, DWLS check"]
+    P3pool --> P5c_grm21["GRM: 21 items"]
+    P4pca["Latent scores > PCA"] --> P4cluster["k-means, Ward, ARI"]
+    P5a_efa["EFA: DASS/BRS"] --> P5a_short["Shortlist by PA/Oblimin"]
+    P5a_short --> P5a_net["Item network: EBICglasso"]
+    P5a_net --> P5c_grm21
+    P5c_grm21 --> P5c_diag["Diagnostics fit, Q3, info"]
+    P5c_diag --> P5c_15["GRM: 15-item, ROC/SEM cal."]
+    P2comp -- Best model --> P3mi
+    P2comp -- Scores --> P4pca
+    P3pool -- Pooled scores --> P4pca
+    P5a_short -- Shortlist --> P5c_diag
+    P5c_15 -- Final form --> P5d_pkg["Scoring kit & R pkg"]

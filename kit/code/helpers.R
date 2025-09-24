@@ -1,5 +1,6 @@
 
 get_item_order <- function(mod, params_csv_fallback = NULL){
+  # Ensure mirt S4 methods are registered
   if (!"package:mirt" %in% search()) suppressPackageStartupMessages(library(mirt))
   items <- NULL; ok <- FALSE
   if (methods::is(mod, "SingleGroupClass")) {
@@ -12,7 +13,14 @@ get_item_order <- function(mod, params_csv_fallback = NULL){
     pc <- readr::read_csv(params_csv_fallback, show_col_types = FALSE)
     if ("item" %in% names(pc)) { items <- pc$item; ok <- TRUE }
   }
-  if (!ok) stop("Could not determine item order. Ensure mod15.rds is a mirt SingleGroupClass; or provide params CSV fallback.")
+  if (!ok) stop("Could not determine item order. Ensure mirt is loaded and mod15.rds is a mirt SingleGroupClass; or provide params_csv_fallback.")
   items
+}
+
+check_model <- function(mod){
+  if (!methods::is(mod, "SingleGroupClass")) {
+    stop("mod15.rds is not a mirt SingleGroupClass. Point assets_dir to the correct file.")
+  }
+  invisible(TRUE)
 }
 
